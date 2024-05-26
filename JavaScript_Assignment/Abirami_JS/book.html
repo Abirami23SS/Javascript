@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Portal</title>
+    <link rel="stylesheet" href="./book.css">
+    <script src="./book.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="head">
+            <ul>
+                <li><a href="book.html" alt="#">Book</a></li>
+                <li><a href="form.html" alt="#">User</a></li>
+            </ul>
+        </div>
+    </header>
+
+         <!-- 
+           booking name -- numbers , symbol
+            Department - dropdown
+            Rack Number - number
+            Author name
+        Publisher name
+        booking photo   
+        Aadhar 
+        Email
+        Phone number
+        Address 
+        PinCode
+        ISBN : ISBN-numbers -->
+
+    <div id="bookform">
+       
+        <h1 style="font-size: 20px;">Add a New book</h1>
+        <form action="" id="bookForm" method="post" onsubmit="return ButtonClick(event)">
+        Book Name: <input type="text" id="book"  onkeyup="ValidateBookName()" required>
+        <span style="visibility: hidden;" id="bookname">Message</span>
+        <br>
+        <br>
+        Category : 
+        <select id="category" required>
+          <option value="CSE">CSE</option>
+          <option value="IT">IT</option>
+          <option value="ECE">ECE</option>
+          <option value="EEE">EEE</option>
+          <option value="MECH">MECH</option>
+      </select> <br>
+
+      <br>
+        Rack Number : <input type="text" id="rack" onkeyup="ValidateRackNumber()">
+        <span style="visibility: hidden;" id="racknumber"></span >
+        <br>
+        <br>
+        Author Name :<input type="text" id="author" required onkeyup="ValidateAuthorName()">
+        <span style="visibility: hidden;" id="authorname"></span>
+        <br>
+        <br>
+        Publisher Year : <input type="text" id="publisher" required onkeyup="ValidatePublisherYear()">
+        <span style="visibility: hidden;" id="publisherYear"></span>
+        <br>
+        <br>
+        Publisher Name : <input type="text" id="publisher_name" required onkeyup="ValidatePublisherName()">
+        <span style="visibility: hidden;" id="publisherName"></span>
+        <br>
+        <br>
+        Email Id : <input type="email" id="mail" required onkeyup="ValidateAuthorEmail()">
+        <span style="visibility: hidden;" id="emailID"></span>
+        <br>
+        <br>
+        Phone Number : <input type="text" id="phone" required onkeyup="ValidatePhoneNumber()">
+        <span style="visibility: hidden;" id="phoneNumber"></span>
+        <br>
+        <br>
+        Address : <input type="text" id="address" required >
+        <span style="visibility: hidden;" id="address_btn"></span>
+        <br>
+        <br>
+        Pincode : <input type="text" id="pincode" required onkeyup="ValidatePincode()">
+        <span style="visibility: hidden;" id="pinCode"></span>
+        <br>
+        <br>
+        ISBN : 
+        <input type="text" id="isbn" required onkeyup="ValidateISBN()">
+        <span style="visibility: hidden;" id="ISBN-numbers"></span> <br>
+        <br>
+        Photo :
+        <input type="file" id="photo" required > <br>
+        <span style="visibility: hidden;" id="book_photo"></span> 
+        <br>
+        <input type="submit" value="Submit">
+
+    </form>
+ </div>
+
+    <div id="bookTable" style="display: none;">
+        <table border="1" cellpadding="4" id="booktable" >
+            <caption>Book Details</caption>
+            <tr>
+                <th>Section</th>
+                <td>Book Details</td>
+            </tr>
+            <tr>
+                <th>Book Name</th>
+                <td id="id1">Velu</td>
+            </tr>
+            <tr>
+                <th>Department</th>
+                <td id="id2">CSE</td>
+            </tr>
+            <tr>
+                <th>Rack Number</th>
+                <td id="id3">10</td>
+            </tr>
+            <tr>
+                <th>Author Name</th>
+                <td id="id4">William</td>
+            </tr>
+            <tr>
+                <th>Publisher Year</th>
+                <td id="id5">2006</td>
+            </tr>
+            <tr>
+                <th>Publisher Name</th>
+                <td id="id6">AB Publisher</td>
+            </tr>
+            <tr>
+                <th>Author Email</th>
+                <td id="id7">abirami@gmail.com</td>
+            </tr>
+            <tr>
+                <th>Phone Number</th>
+                <td id="id8">987654345</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td id="id9">Cuddalore</td>
+            </tr>
+            <tr>
+                <th>Pincode</th>
+                <td id="id10">607001</td>
+            </tr>
+            <tr>
+                <th>ISBN Number</th>
+                <td id="id11">ISBN-604285</td>
+            </tr>
+            <tr>
+                <th>Book Image</th>
+                <td><img src="./images/book.jpg" alt="" id="id12"><button>Download Image</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

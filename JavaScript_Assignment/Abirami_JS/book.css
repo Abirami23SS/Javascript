@@ -1,0 +1,27 @@
+.head{
+    background-color: lightcyan;
+    /* display:  flex; */
+    width: 100%;
+   
+}
+.head ul{
+    list-style: none;
+    display: flex;
+    border: 2px solid red;
+   
+}
+.head ul li{
+    /* margin: 20px; */
+    padding: 10px 20px 10px 0px;
+    margin-left: 70px;
+    font-size: 22px;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+#bookForm{
+    background-color: lightgray;
+    border: 2px solid black;
+   padding: 10px 10px;
+}
